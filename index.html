@@ -35,27 +35,34 @@
     width: 100%;
   }
     .card {
-    width: 400px;
-    gap: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: transparent;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 25px;
-    margin: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .card img {
-    width: 100%;
-    height: 150px;
+  width: 400px;
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 25px;
+  margin: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s, box-shadow 0.5s, border 0.5s;
+}
 
-    object-fit: contain;
-    border-radius: full;
-    align-items: center;
-  }
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  border-color: #3b82f6; /* Tailwind's blue-500 color */
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+  border-radius: 50%;
+  align-items: center;
+}
+
   
   #name {
     font-size: 26px;
@@ -129,16 +136,20 @@
         <div class="ncollapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto">
             <li class="nav-item">
-              <a class="nav-link text-capitalize" aria-current="page" href="#">Services</a>
+              <!-- <a class="nav-link text-capitalize" aria-current="page" href="#">Services</a> -->
+              <a class="nav-link text-capitalize font-bold text-lg text-blue transition-colors duration-100 hover:text-black-800 hover:bg-red-400 py-1 px-4 rounded" aria-current="page" href="#">Services</a>
+
             </li>
             <li class="nav-item">
-              <a class="nav-link text-capitalize" href="#">Our Clients</a>
+              <a class="nav-link text-capitalize font-bold text-lg text-blue transition-colors duration-100 hover:text-black hover:bg-red-400 py-1 px-4 rounded" aria-current="page" href="#">Our Clients</a>
+
             </li>
             <!-- <li class="nav-item">
                                     <a class="nav-link text-capitalize" href="#">Pricing </a>
                                 </li> -->
             <li class="nav-item">
-              <a class="nav-link text-capitalize" href="#">Team</a>
+              <a class="nav-link text-capitalize font-bold text-lg text-blue transition-colors duration-100 hover:text-black hover:bg-red-400 py-1 px-4 rounded" aria-current="page" href="#">Team</a>
+
             </li>
             <!-- <li class="nav-item">
                                     <a class="nav-link text-capitalize" href="#">blog</a>
@@ -668,6 +679,7 @@
         <div class="teamflex gap-[3.5rem]">
 
           <!-- CArd  -->
+           
           <div class="card" >
             <img
             
@@ -686,6 +698,7 @@
               conversions.
             </p>
           </div>
+          
           
           <!-- CArd  -->
 
@@ -3762,12 +3775,12 @@
         <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-5 col-sm-10 d-flex flex-column">
             <h5 class="text-white relative underline-animation">Services</h5> 
             <ul class="list-unstyled mb-0 pl-0">
-             <li><a href="#">Social Media Marketing</a></li>
-             <li><a href="#">SEO</a></li>
-             <li><a href="#">Software Development</a></li>
-             <li><a href="#">Advertisement</a></li>
-             <li><a href="#">Content Creation</a></li>
-             <li><a href="#">Branding and Sales</a></li>
+             <li><a href="#services">Social Media Marketing</a></li>
+             <li><a href="#services">SEO</a></li>
+             <li><a href="#services">Software Development</a></li>
+             <li><a href="#services">Advertisement</a></li>
+             <li><a href="#services">Content Creation</a></li>
+             <li><a href="#services">Branding and Sales</a></li>
            </ul> 
          </div>
         <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-5 col-sm-10 d-flex flex-column">
@@ -3780,31 +3793,8 @@
             </ul>
             
           </div>
-        <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-6 col-sm-12">
-            <div class="subscribe">
-              <h5 class="text-white">Subscribe to our newsletter and be first to know about updates</h5>
-              <div class="input-group">
-                
-                  <div class="grid grid-cols-1 gap-2">
-                    <div class="row-span-2">
-                      <!-- <input type="email" class="form-control br-40 w-full" placeholder="Enter email address"
-                             aria-label="Enter email address" aria-describedby="button-addon2"> -->
-                      <input type="email" class="form-control rounded-lg w-80 p-2" placeholder="Enter email address"
-                             aria-label="Enter email address" aria-describedby="button-addon2">
-                      
-                    </div>
-                    <div>
-                      <button class="rounded-lg bg-blue-500 text-white px-4 py-2">
-                        <a href="#calendly">
-                          call us
-                        </a>
-                      </button>
-                    </div>
-                  </div>
+        
                   
-                  
-  
-                </button>
               </div>
             </div>
           </div>
