@@ -19,28 +19,50 @@
   <link rel="stylesheet" href="./dist/css/button.css">
   <link rel="stylesheet" href="./dist/css/teamcard.css">
   <style>
-    .card {
-    width: 400px;
-    gap: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: transparent;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 25px;
-    margin: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    .underline-animation::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: rgb(252, 37, 37);
+    transition: width 0.2s;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
   }
-  
-  .card img {
-    width: 100%;
-    height: 150px;
 
-    object-fit: contain;
-    border-radius: full;
-    align-items: center;
+  .underline-animation:hover::after {
+    width: 100%;
   }
+    .card {
+  width: 400px;
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 25px;
+  margin: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s, box-shadow 0.5s, border 0.5s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  border-color: #3b82f6; /* Tailwind's blue-500 color */
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+  border-radius: 50%;
+  align-items: center;
+}
+
   
   #name {
     font-size: 26px;
@@ -114,16 +136,20 @@
         <div class="ncollapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto">
             <li class="nav-item">
-              <a class="nav-link text-capitalize" aria-current="page" href="#">Services</a>
+              <!-- <a class="nav-link text-capitalize" aria-current="page" href="#">Services</a> -->
+              <a class="nav-link text-capitalize font-bold text-lg text-blue transition-colors duration-100 hover:text-black-800 hover:bg-red-400 py-1 px-4 rounded" aria-current="page" href="#">Services</a>
+
             </li>
             <li class="nav-item">
-              <a class="nav-link text-capitalize" href="#">Our Clients</a>
+              <a class="nav-link text-capitalize font-bold text-lg text-blue transition-colors duration-100 hover:text-black hover:bg-red-400 py-1 px-4 rounded" aria-current="page" href="#">Our Clients</a>
+
             </li>
             <!-- <li class="nav-item">
                                     <a class="nav-link text-capitalize" href="#">Pricing </a>
                                 </li> -->
             <li class="nav-item">
-              <a class="nav-link text-capitalize" href="#">Team</a>
+              <a class="nav-link text-capitalize font-bold text-lg text-blue transition-colors duration-100 hover:text-black hover:bg-red-400 py-1 px-4 rounded" aria-current="page" href="#">Team</a>
+
             </li>
             <!-- <li class="nav-item">
                                     <a class="nav-link text-capitalize" href="#">blog</a>
@@ -653,6 +679,7 @@
         <div class="teamflex gap-[3.5rem]">
 
           <!-- CArd  -->
+           
           <div class="card" >
             <img
             
@@ -671,6 +698,7 @@
               conversions.
             </p>
           </div>
+          
           
           <!-- CArd  -->
 
@@ -3722,56 +3750,56 @@
       <div class="row">
         <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12">
           <div class="footer-logo-col">
-            <a href="#"><img src="./assets/images/logo.png" style="height: 250px; width: 250px;"></a>
+            <a href="#"><img src="./assets/images/logo.png" style="height: 240px; width: 240px;"></a>
             <p class="blue-light mb-0 fs-7 fw-500"></p>
-            <div class="callus text-white fw-500 fs-7">
-              Come with us ! And boost your business.
-              <div class="blue-light">Call us: <a href="#"
-                  class="text-warning fw-500 fs-7 text-decoration-none">808-956-9599</a></div>
-            </div>
+             <div class="callus text-white fw-500 fs-7"> 
+                <div class="blue-light">Call us at: <a href="#"
+                    class="text-warning fw-500 fs-7 text-decoration-none">7087843059</a></div>
+              </div>
           </div>
         </div>
-        <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-6 col-sm-12">
-          <h5 class="text-white">Social</h5>
-          <ul class="list-unstyled mb-0 pl-0">
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">Instagram</a></li>
-          </ul>
-        </div>
-        <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-6 col-sm-12">
-          <h5 class="text-white">Company</h5>
-          <ul class="list-unstyled mb-0 pl-0">
-            <li><a href="#">About</a></li>
-            <li><a href="#">Affiliates</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Legal & Privacy</a></li>
-          </ul>
-        </div>
-        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12">
-          <div class="subscribe">
-            <h5 class="text-white">Subscribe</h5>
-            <p class="blue-light fw-500">Subscribe to get the latest news form us
-            </p>
-            <div class="input-group">
-              <input type="email" class="form-control br-15" placeholder="Enter email address"
-                aria-label="Enter email address" aria-describedby="button-addon2">
-              <button class="btn btn-warning btn-hover-secondery ms-xxl-2 ms-xl-2 ls-lg-0 ms-md-0 ms-sm-0 ms-0"
-                type="button" id="button-addon2">
-                <a href="#calendly">
-                  Get On a Call
-                </a>
+        <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-5 col-sm-10 d-flex flex-column">
+             <!-- <h5 class="text-white">Quick Links</h5>  -->
+             <h5 class="text-white relative underline-animation">
+              Quick Links
+            </h5>
+            
 
-              </button>
+
+             <ul class="list-unstyled mb-0 pl-0">
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Our Clients</a></li>
+              <li><a href="#">Team</a></li>
+            </ul> 
+        </div>
+        <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-5 col-sm-10 d-flex flex-column">
+            <h5 class="text-white relative underline-animation">Services</h5> 
+            <ul class="list-unstyled mb-0 pl-0">
+             <li><a href="#services">Social Media Marketing</a></li>
+             <li><a href="#services">SEO</a></li>
+             <li><a href="#services">Software Development</a></li>
+             <li><a href="#services">Advertisement</a></li>
+             <li><a href="#services">Content Creation</a></li>
+             <li><a href="#services">Branding and Sales</a></li>
+           </ul> 
+         </div>
+        <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-5 col-sm-10 d-flex flex-column">
+            <h5 class="text-white relative underline-animation">Others</h5>
+            <ul class="list-unstyled mb-0 pl-0">
+              <li><a href="#">User FAQs</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms & Condition</a></li>
+            </ul>
+            
+          </div>
+        
+                  
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="copyrights text-center blue-light  fw-500">@<span id="autodate">2023</span> - All Rights Reserved
-      </div>
-    </div>
-  </footer>
+  
   <!------------------------------>
   <!-------Footer End------------->
   <!------------------------------>
