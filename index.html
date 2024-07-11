@@ -101,7 +101,70 @@
 
   </style>
 
+  <!-- who we are section -->
+  <style>
+    .container-start {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        padding: 40px 20px;
+    }
+    .WHO-WE-ARE-title {
+        color: #ff0000;
+        font-weight: 400;
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+    .Underlined-title {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        margin-top: 5%;
+        margin-bottom: 4%;
+    }
+    .Underlined-title span {
+        text-decoration: underline;
+        text-decoration-color: #ff0000;
+    }
+    .description-about {
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 23px;
+        width: 80%;        
+        margin-left: 10%;
+        margin-bottom: 20px;
+    }
+    .learn-more-btn-with-arrow {
+        background-color: #ff0000;
+        color: white;
+        font-weight: bold;
+        padding: 16px 28px;
+        border-radius: 25px;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+    .learn-more-btn:hover {
+        background-color: #ff5722;
+        color: white;
+    }
+    .learn-more-btn span {
+        margin-left: 10px;
+        font-size: 1.5rem;
+    }
+    .teamwork-img {
+        width: 100%;
+        height: auto;
+    }
+    .trusted-by-clients-body {
+        color: red;
+        font-size: 25px;
+        font-weight: 400;
+        margin-top: 5%;
+    }
+</style>
 
+  
   <link rel="stylesheet" href="./dist/css/heading.css">
 
   <script src="https://cdn.tailwindcss.com"></script>
@@ -122,7 +185,7 @@
   <!------------------------------>
   <!-- Header Start -->
   <!------------------------------>
-  <header class="main-header position-fixed w-100">
+  <header class="main-header position-fixed w-100" style="color: #fff; background-color: #fff; height: 125px;">
     <div class="container">
       <nav class="navbar navbar-expand-xl py-0">
         <div class="logo">
@@ -137,20 +200,32 @@
           <ul class="navbar-nav me-auto">
             <li class="nav-item">
               <!-- <a class="nav-link text-capitalize" aria-current="page" href="#">Services</a> -->
+              <a class="nav-link text-capitalize font-bold text-lg text-blue transition-colors duration-100 hover:text-black-800 hover:bg-red-400 py-1 px-4 rounded" aria-current="page" href="#">Home</a>
+
+            </li>
+            <li class="nav-item">
+              <!-- <a class="nav-link text-capitalize" aria-current="page" href="#">Services</a> -->
+              <a class="nav-link text-capitalize font-bold text-lg text-blue transition-colors duration-100 hover:text-black-800 hover:bg-red-400 py-1 px-4 rounded" aria-current="page" href="#">About Us</a>
+
+            </li>
+            <li class="nav-item">
+              <!-- <a class="nav-link text-capitalize" aria-current="page" href="#">Services</a> -->
               <a class="nav-link text-capitalize font-bold text-lg text-blue transition-colors duration-100 hover:text-black-800 hover:bg-red-400 py-1 px-4 rounded" aria-current="page" href="#">Services</a>
 
             </li>
             <li class="nav-item">
-              <a class="nav-link text-capitalize font-bold text-lg text-blue transition-colors duration-100 hover:text-black hover:bg-red-400 py-1 px-4 rounded" aria-current="page" href="#">Our Clients</a>
+              <!-- <a class="nav-link text-capitalize" aria-current="page" href="#">Services</a> -->
+              <a class="nav-link text-capitalize font-bold text-lg text-blue transition-colors duration-100 hover:text-black-800 hover:bg-red-400 py-1 px-4 rounded" aria-current="page" href="#">Work</a>
+
+            </li>
+            <li class="nav-item">
+              <!-- <a class="nav-link text-capitalize" aria-current="page" href="#">Services</a> -->
+              <a class="nav-link text-capitalize font-bold text-lg text-blue transition-colors duration-100 hover:text-black-800 hover:bg-red-400 py-1 px-4 rounded" aria-current="page" href="#">Contact us</a>
 
             </li>
             <!-- <li class="nav-item">
                                     <a class="nav-link text-capitalize" href="#">Pricing </a>
                                 </li> -->
-            <li class="nav-item">
-              <a class="nav-link text-capitalize font-bold text-lg text-blue transition-colors duration-100 hover:text-black hover:bg-red-400 py-1 px-4 rounded" aria-current="page" href="#">Team</a>
-
-            </li>
             <!-- <li class="nav-item">
                                     <a class="nav-link text-capitalize" href="#">blog</a>
                                 </li> -->
@@ -161,6 +236,9 @@
                                     <input type="text" class="form-control border-0 bg-transparent ps-2" placeholder="search" aria-label="Example text with button addon" aria-describedby="button-addon1">
                                 </div> -->
             <a class="btn btn-warning btn-hover-secondery text-capitalize " href="#calendly">Get on a call</a>
+              <!-- <a href="https://www.facebook.com" class="facebook"><i class="fab fa-facebook"></i></a>
+              <a href="https://www.instagram.com" class="instagram"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.linkedin.com" class="linkedin"><i class="fab fa-linkedin"></i></a> -->
           </div>
         </div>
       </nav>
@@ -270,7 +348,7 @@
       <div class="absolute inset-0 bg-black bg-opacity-50"></div>
     </div>
     <div class="container relative z-10 flex items-center justify-center h-full">
-      <div class="text-center animate__animated animate__fadeInLeft">
+      <div class="text-center animate__animated animate__fadeInLeft" style="margin-top: 3%;">
         <!-- <h1 class="mt-20 mb-3 font-bold text-[#dc2626] text-4xl sm:text-5xl lg:text-6xl xl:text-7xl">
              
           </h1> -->
@@ -321,10 +399,20 @@
         </div>
 
 
-        <a href="#calendly"
+        <!-- <a href="#calendly"
           class="btn bg-red-500 hover:bg-yellow-600 text-white font-bold py-4 px-7 rounded-lg animate__animated animate__bounceIn">
           Get On a Call Today
         </a>
+       -->
+       <!-- <a href="#calendly"
+          class="btn bg-red-500 hover:bg-yellow-600 text-white font-bold py-4 px-7 rounded-lg animate__animated animate__bounceIn" style="width: 200px;">
+          See Work <svg style="width: 40px; align-self:flex-end;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM281 385c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l71-71L136 280c-13.3 0-24-10.7-24-24s10.7-24 24-24l182.1 0-71-71c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L393 239c9.4 9.4 9.4 24.6 0 33.9L281 385z"/></svg>
+        <!--</a>-->
+        <a href="#calendly"
+          class="btn bg-red-500 hover:bg-yellow-600 text-white font-bold py-4 px-7 rounded-lg animate__animated animate__bounceIn" style="background-color: white; border: 3px solid red; border-radius: 30px;">
+          <span style="color: red; text-align: center;">See Work <span> -> </span></span>
+        </a>
+      
         <!-- <div class="relative animate__animated animate__fadeInRight mt-8">
               <img src="./assets/images/hero/right-image.png" class="img-fluid h-96 w-full sm:w-auto">
           </div> -->
@@ -337,6 +425,101 @@
   <!------------------------------>
 
   <div class="wave-container-white wave-container-trans"></div>
+
+
+
+  <!------------------------------>
+  <!-- Who We Are Start -->
+  <!------------------------------>
+
+  <div class="container-start">
+    <div class="WHO-WE-ARE-title">WHO WE ARE</div>
+    <div class="Underlined-title">We're built for <span>Creative teams</span></div>
+    <div class="description-about">
+        At Revibe Academy, we began our journey in May 2021 by managing social media for companies and teaching digital marketing basics. As we grew, we recognized the many challenges business owners face in finding diverse talent for various needs, leading to management issues and inefficiencies.<br><br>
+        To address this, we founded Arka Consultancy. Our goal is to be a one-stop solution for all your business needs. Our team of experts in every department is dedicated to understanding and fulfilling your requirements. With Arka Consultancy, you can enjoy peace of mind knowing that we handle the complexities, allowing you to focus on what you do best.
+    </div>
+    <a href="#calendly" class="learn-more-btn-with-arrow">
+        Learn More <span> → </span>
+    </a>
+    <div>
+        <img id="teamwork-img" src="./temwork img.png" alt="Teamwork Illustration" style="width: 100%;">
+    </div>
+    <div class="trusted-by-clients-body">TRUSTED BY CLIENTS</div>
+<!-- extra section
+  </div>
+<div class="Underlined-title" style="text-align: center;">We're built for <span style="text-decoration-color: blue;">Creative teams</span></div>
+<div>
+  <img src="./domain we deal with.png" alt="Domains We Deal With" style="width: 100%; height: auto;">
+  <div class="trusted-by-clients-body" style="text-align: center; margin-bottom: 20px;">OUR EXPERTISE</div>
+
+</div>
+<div class="Underlined-title" style="text-align: center;">Providing Best  <span>Services</span>
+</div>
+<div style="display: flex; align-items: flex-start; margin: 15%;">
+  <img src="./get unstuck.png" alt="Get Unstuck" style="max-width: 100%; height: auto; margin-right: 20px;">
+  <section style="text-align: right;">
+      <p style="font-size: 1.2em; margin-bottom: 20px; margin-left: 60%;"><span style="font-weight: bolder;">An outdated website means</span> you're not engaging your customers and driving sales. It's time to get unstuck.</p>
+      <button style="padding: 10px 20px; border: none; background: #f00; color: #fff; border-radius: 20px; cursor: pointer;margin-right: 20%;">Get Unstuck Now</button>
+  </section>
+</div> -->
+
+
+<!-- <div id="trust-body">
+<header id="header-body">
+<h1>We built trust in our <span class="highlight">clients</span></h1>
+</header>
+<section class="domains">
+    <h2>Domains We Deal With</h2>
+    <div class="domains-container">
+        <div class="domain">
+            <img src="designocracy.png" alt="Designocracy">
+            <p>Designocracy</p>
+        </div>
+        <div class="domain">
+            <img src="art_academy.png" alt="Art Academy">
+            <p>Art Academy</p>
+        </div>
+        <div class="domain">
+            <img src="cosmic_sports.png" alt="Cosmic Sports">
+            <p>Cosmic Sports</p>
+        </div>
+        <div class="domain">
+            <img src="intdeco.png" alt="Intdeco">
+            <p>Intdeco</p>
+        </div>
+        <div class="domain">
+            <img src="musketeers.png" alt="Musketeers">
+            <p>Musketeers</p>
+        </div>
+        <div class="domain">
+            <img src="entreprenow.png" alt="EntrepNOW">
+            <p>EntrepNOW</p>
+        </div>
+        <div class="domain">
+            <img src="findr.png" alt="Findr">
+            <p>Findr</p>
+        </div>
+        <div class="domain">
+            <img src="rendez_vous.png" alt="Rendez-Vous">
+            <p>Rendez-Vous</p>
+        </div>
+    </div>
+    <button>See All Clients</button>
+</section>
+
+<section class="services-client">
+    <h2>Our Expertise</h2>
+    <h1>Providing Best <span class="highlight">Services</span></h1>
+    <p class="main-text">GET <span class="highlight-unstuck">UNSTUCK.</span></p>
+    <p class="sub-text">An outdated website means you're not engaging your customers and driving sales. It's time to get unstuck.</p>
+    <button>Get Unstuck Now</button>
+</section>
+</div>
+  -------------------------- -->
+  <!-- Who We Are Ends -->
+  <!------------------------------>
+
 
 
   <!------------------------------>
@@ -3587,13 +3770,13 @@
                 <button class="accordion-button collapsed text-black fs-7" type="button" data-bs-toggle="collapse"
                   data-bs-target="#panelsStayOpen-collapsefour" aria-expanded="false"
                   aria-controls="panelsStayOpen-collapsefour">
-                  What's your team size?
+                  Whats your team size?
                 </button>
               </h2>
               <div id="panelsStayOpen-collapsefour" class="accordion-collapse collapse"
                 aria-labelledby="panelsStayOpen-headingfour">
                 <div class="accordion-body fs-7 fw-500 pt-0">
-                  With a talented team of 200+ people and increasing, we have a proven track record of success. We are
+                  With a talented team of 30-50 people and increasing, we have a proven track record of success. We are
                   dedicated to delivering innovative and effective solutions that drive real
                   results
                 </div>
